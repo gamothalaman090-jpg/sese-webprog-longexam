@@ -1,3 +1,13 @@
+// Product images
+import imgMonolithBackpack from './img/Media (4).jpg';
+import imgGoldStandardHoodie from './img/Media (5).jpg';
+import imgTitaniumFlask from './img/Media (6).jpg';
+import imgZenithJournal from './img/Media (7).jpg';
+import imgStudyNotebooks from './img/Media (3).jpg';
+import imgAncHeadphones from './img/Media (8).jpg';
+import imgCampusReadyTote from './img/Media (1).jpg';
+import imgFocusDeskMat from './img/Media (2).jpg';
+
 const products = [
   {
     name: 'nu-monolith-backpack',
@@ -5,7 +15,7 @@ const products = [
     category: 'Equipment',
     price: 'PHP 2,899',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800',
+    image: imgMonolithBackpack,
     content: [
       'The Monolith is the pinnacle of campus utility. Engineered for the modern Bulldog, it blends structural integrity with a minimalist aesthetic.',
       'Constructed from high-density ballistic nylon with water-resistant coating, it features a dedicated 16-inch suspended laptop sleeve and ergonomic airflow back padding.',
@@ -18,7 +28,7 @@ const products = [
     category: 'Apparel',
     price: 'PHP 1,850',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800',
+    image: imgGoldStandardHoodie,
     content: [
       'Elevated comfort for the dedicated student. The Gold Standard Hoodie redefined campus leisure with its heavyweight French Terry cotton.',
       'Features a structured hood, oversized fit, and a premium 3D-embroidered Bulldogs crest on the chest. The gold-tipped drawstrings add a touch of luxury.',
@@ -31,7 +41,7 @@ const products = [
     category: 'Lifestyle',
     price: 'PHP 1,200',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&q=80&w=800',
+    image: imgTitaniumFlask,
     content: [
       'Engineered for endurance. The Titanium Series Flask keeps your focus sharp and your drinks at the perfect temperature.',
       'Double-walled vacuum insulation maintains heat for 12 hours and cold for 24. The laser-etched NU topography design provides a superior grip.',
@@ -44,7 +54,7 @@ const products = [
     category: 'Workspace',
     price: 'PHP 750',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800',
+    image: imgZenithJournal,
     content: [
       'Capture your breakthrough ideas in the Zenith Tech Journal. A premium writing experience designed for the creative academic.',
       'Features 120gsm ink-proof paper, a lay-flat binding system, and a vegan leather cover with embossed NU branding.',
@@ -57,7 +67,7 @@ const products = [
     category: 'Tech',
     price: 'PHP 4,500',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800',
+    image: imgAncHeadphones,
     content: [
       'Silence the noise and find your focus. The Bulldog ANC Headphones deliver professional-grade sound for the serious student.',
       'Active Noise Cancellation technology blocks out campus distractions, while the 40-hour battery life ensures you never miss a beat.',
@@ -70,7 +80,7 @@ const products = [
     category: 'Accessories',
     price: 'PHP 450',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=800',
+    image: imgStudyNotebooks,
     content: [
       'Minimalist security for your essential credentials. The Signature Card Case is crafted for the modern professional student.',
       'RFID-blocking technology protects your student ID and payment cards. Slim profile design fits perfectly in any pocket or bag.',
@@ -83,7 +93,7 @@ const products = [
     category: 'Bags',
     price: 'PHP 650',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800',
+    image: imgCampusReadyTote,
     content: [
       'The ultimate everyday carry. The Campus Ready Tote combines simplicity with professional-grade construction.',
       'Reinforced handles and a heavy-duty canvas body ensure it can handle your daily book load with ease.',
@@ -96,7 +106,7 @@ const products = [
     category: 'Workspace',
     price: 'PHP 850',
     stock: 'In stock',
-    image: 'https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&q=80&w=800',
+    image: imgFocusDeskMat,
     content: [
       'Define your workspace with the NU Focus Desk Mat. A premium surface designed to enhance your study environment.',
       'Smooth vegan leather surface provides precision tracking for mice and a comfortable writing experience.',
