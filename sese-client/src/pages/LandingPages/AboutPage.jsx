@@ -4,18 +4,18 @@ import logo from '../../assets/img/nubdexchange_logo.png';
 import products from '../../assets/product-content';
 
 const AboutPage = () => {
-  // Pick 4 featured products for the grid
+
   const featured = products.slice(0, 4);
 
   return (
     <div className="flex w-full flex-col">
 
-      {/* ─── Hero Section ─── */}
+
       <section className="pt-32 pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="glass rounded-3xl border-white/5 p-10 md:p-14">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-              {/* Logo */}
+
               <div className="shrink-0">
                 <div className="relative w-28 h-28 md:w-36 md:h-36">
                   <div className="absolute inset-0 bg-primary-500/15 rounded-full blur-2xl"></div>
@@ -27,7 +27,7 @@ const AboutPage = () => {
                 </div>
               </div>
 
-              {/* Copy */}
+
               <div className="flex-1 space-y-5 text-center md:text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500">
                   About Store
@@ -54,10 +54,10 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ─── Quick Store Blocks ─── */}
+
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Section header */}
+
           <div className="mb-8">
             <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-1">
               Feat History
@@ -67,7 +67,7 @@ const AboutPage = () => {
             </h2>
           </div>
 
-          {/* Stat cards */}
+
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { count: '08', label: 'Items', icon: Package },
@@ -94,10 +94,10 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ─── Stacked Shopping Wireframe ─── */}
+
       <section className="py-16 bg-bg-surface/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Section header */}
+
           <div className="mb-10">
             <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-1">
               Store Flow
@@ -108,7 +108,6 @@ const AboutPage = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {/* Left: Feature cards */}
             <div className="flex flex-col gap-5">
               {[
                 {
@@ -138,7 +137,7 @@ const AboutPage = () => {
               ))}
             </div>
 
-            {/* Right: Featured items grid */}
+
             <div className="glass rounded-2xl border-white/5 p-6">
               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-5">
                 Featured Item
@@ -155,7 +154,7 @@ const AboutPage = () => {
                       alt={product.title}
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                     />
-                    {/* Overlay */}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
                       <p className="text-xs font-bold text-white truncate">{product.title}</p>
                       <p className="text-[10px] text-primary-400 font-semibold">{product.price}</p>
@@ -164,7 +163,7 @@ const AboutPage = () => {
                 ))}
               </div>
 
-              {/* View products link */}
+
               <div className="mt-5 flex justify-start">
                 <Button to="/products" variant="secondary" className="px-5 py-2 text-[10px] group/link">
                   View Products <ArrowRight className="ml-1.5 h-3 w-3 group-hover/link:translate-x-0.5 transition-transform" />
