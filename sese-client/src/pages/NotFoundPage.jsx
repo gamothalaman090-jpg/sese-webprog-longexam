@@ -7,7 +7,7 @@ const NotFoundPage = () => {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-24 relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-500/10 blur-[120px] rounded-full -z-10"></div>
-      
+
       <div className="max-w-4xl w-full text-center space-y-12">
         <div className="space-y-4">
           <p className="text-primary-500 font-bold uppercase tracking-[0.3em] text-sm animate-pulse">
@@ -33,26 +33,26 @@ const NotFoundPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 text-left">
           {[
-            { 
-              title: "Home", 
-              desc: "Return to our main store front", 
-              icon: Home, 
-              link: "/" 
+            {
+              title: "Home",
+              desc: "Return to our main store front",
+              icon: Home,
+              link: "/"
             },
-            { 
-              title: "Collection", 
-              desc: "Explore latest campus merch", 
-              icon: ShoppingBag, 
-              link: "/products" 
+            {
+              title: "Collection",
+              desc: "Explore latest campus merch",
+              icon: ShoppingBag,
+              link: "/products"
             },
-            { 
-              title: "About", 
-              desc: "Learn about our mission", 
-              icon: Info, 
-              link: "/about" 
+            {
+              title: "About",
+              desc: "Learn about our mission",
+              icon: Info,
+              link: "/about"
             }
           ].map((item, i) => (
-            <NavLink 
+            <NavLink
               key={i}
               to={item.link}
               className="glass p-6 rounded-2xl group transition-all duration-300 hover:border-primary-500/50 hover:bg-bg-surface-lighter"

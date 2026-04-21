@@ -1,47 +1,52 @@
-import { Sparkles, Target, Users, ShieldCheck, ArrowRight, Zap, GraduationCap } from 'lucide-react';
+import { Package, ShoppingCart, MapPin, Clock, ArrowRight } from 'lucide-react';
 import Button from '../../components/Button';
 import logo from '../../assets/img/nubdexchange_logo.png';
+import products from '../../assets/product-content';
 
 const AboutPage = () => {
+  // Pick 4 featured products for the grid
+  const featured = products.slice(0, 4);
+
   return (
     <div className="flex w-full flex-col">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary-500/5 blur-[120px] rounded-full -z-10"></div>
-        
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 text-primary-500 text-[10px] font-bold uppercase tracking-[0.3em]">
-                <Sparkles className="h-3 w-3" />
-                <span>Our Identity</span>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-tight">
-                MORE THAN JUST <br /> A <span className="text-gradient">STORE.</span>
-              </h1>
-              <p className="text-xl text-gray-400 leading-relaxed max-w-xl">
-                BulldogEx is the definitive destination for premium campus lifestyle. We curate essentials that empower National University students to perform at their peak.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Button to="/products" className="px-8">View Collection</Button>
-                <Button to="/" variant="secondary">Back Home</Button>
-              </div>
-            </div>
 
-            <div className="relative group">
-              <div className="absolute inset-0 bg-primary-500/20 blur-[100px] rounded-full group-hover:bg-primary-500/30 transition-all duration-700"></div>
-              <div className="relative glass p-12 rounded-[60px] border-white/10 flex flex-col items-center justify-center text-center space-y-8">
-                <div className="relative w-48 h-48">
-                  <div className="absolute inset-0 bg-primary-500/20 rounded-full animate-ping"></div>
-                  <img 
-                    src={logo} 
-                    alt="BulldogEx" 
-                    className="relative z-10 w-48 h-48 rounded-full border-4 border-primary-500/50 p-2 bg-bg-dark"
+      {/* ─── Hero Section ─── */}
+      <section className="pt-32 pb-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass rounded-3xl border-white/5 p-10 md:p-14">
+            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+              {/* Logo */}
+              <div className="shrink-0">
+                <div className="relative w-28 h-28 md:w-36 md:h-36">
+                  <div className="absolute inset-0 bg-primary-500/15 rounded-full blur-2xl"></div>
+                  <img
+                    src={logo}
+                    alt="BulldogEx Logo"
+                    className="relative z-10 w-full h-full rounded-full border-2 border-primary-500/30 p-1.5 bg-bg-dark object-cover"
                   />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-black text-white uppercase tracking-tight">BulldogEx Premium</h3>
-                  <p className="text-primary-500 font-bold text-xs uppercase tracking-widest mt-1">Official NU Partner</p>
+              </div>
+
+              {/* Copy */}
+              <div className="flex-1 space-y-5 text-center md:text-left">
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500">
+                  About Store
+                </p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                  A campus shop focused on useful products and simple ordering.
+                </h1>
+                <p className="text-sm text-gray-400 leading-relaxed max-w-xl">
+                  BulldogEx Shop keeps the low-fidelity layout system while providing
+                  clear product imagery, quick actions, and straightforward store
+                  information.
+                </p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                  <Button to="/" variant="primary" className="px-6 py-2.5 text-[10px]">
+                    Back Home
+                  </Button>
+                  <Button to="/products" variant="secondary" className="px-6 py-2.5 text-[10px]">
+                    Lean Products
+                  </Button>
                 </div>
               </div>
             </div>
@@ -49,73 +54,123 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-24 bg-bg-surface/30">
+      {/* ─── Quick Store Blocks ─── */}
+      <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12">
+          {/* Section header */}
+          <div className="mb-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-1">
+              Feat History
+            </p>
+            <h2 className="text-2xl font-black text-white tracking-tight">
+              Quick store blocks
+            </h2>
+          </div>
+
+          {/* Stat cards */}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              {
-                icon: <Target className="h-8 w-8 text-primary-500" />,
-                title: "Curated Excellence",
-                desc: "We don't just sell products; we curate experiences. Every item in our catalog undergoes rigorous selection for quality and relevance."
-              },
-              {
-                icon: <ShieldCheck className="h-8 w-8 text-primary-500" />,
-                title: "Official Authenticity",
-                desc: "100% official merchandise. We represent the National University brand with the highest standards of integrity and pride."
-              },
-              {
-                icon: <Zap className="h-8 w-8 text-primary-500" />,
-                title: "Student-Centric",
-                desc: "Designed by Bulldogs, for Bulldogs. We understand the unique challenges and triumphs of campus life."
-              }
-            ].map((item, i) => (
-              <div key={i} className="space-y-6 group">
-                <div className="w-16 h-16 rounded-3xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center group-hover:bg-primary-500/20 transition-all duration-500">
-                  {item.icon}
+              { count: '08', label: 'Items', icon: Package },
+              { count: '06', label: 'Categories', icon: ShoppingCart },
+              { count: '03', label: 'Pickup Slots', icon: MapPin },
+              { count: '24', label: 'Hours', icon: Clock },
+            ].map((block, idx) => (
+              <div
+                key={idx}
+                className="glass p-7 rounded-2xl group transition-all duration-300 hover:border-primary-500/40 hover:bg-bg-surface-lighter cursor-default"
+              >
+                <div className="w-10 h-10 rounded-xl bg-primary-500/10 flex items-center justify-center text-primary-500 mb-5 group-hover:scale-110 group-hover:bg-primary-500/20 transition-all duration-300">
+                  <block.icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+                <p className="text-4xl font-black text-white leading-none tracking-tight mb-2 group-hover:text-primary-400 transition-colors duration-300">
+                  {block.count}
+                </p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
+                  {block.label}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary-500/5 -z-10"></div>
+      {/* ─── Stacked Shopping Wireframe ─── */}
+      <section className="py-16 bg-bg-surface/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { label: "Active Students", value: "15k+", icon: <Users className="h-4 w-4" /> },
-              { label: "Official Products", value: "250+", icon: <Sparkles className="h-4 w-4" /> },
-              { label: "Campus Branches", value: "12", icon: <GraduationCap className="h-4 w-4" /> },
-              { label: "Years of Pride", value: "25+", icon: <ShieldCheck className="h-4 w-4" /> }
-            ].map((stat, i) => (
-              <div key={i} className="glass p-8 rounded-[32px] border-white/5 text-center space-y-2">
-                <div className="flex justify-center text-primary-500 mb-2">{stat.icon}</div>
-                <div className="text-4xl font-black text-white tracking-tighter">{stat.value}</div>
-                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{stat.label}</div>
-              </div>
-            ))}
+          {/* Section header */}
+          <div className="mb-10">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-1">
+              Store Flow
+            </p>
+            <h2 className="text-2xl font-black text-white tracking-tight">
+              Stacked shopping wireframe
+            </h2>
           </div>
-        </div>
-      </section>
 
-      {/* Join Section */}
-      <section className="py-24 px-4">
-        <div className="mx-auto max-w-5xl text-center space-y-12">
-          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
-            BE PART OF THE <br /> <span className="text-gradient">NU LEGACY.</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Ready to elevate your campus experience? Join thousands of students who choose BulldogEx for their daily essentials.
-          </p>
-          <div className="flex justify-center gap-6">
-            <Button to="/auth/signup" className="px-12 group">
-              Join the Pack <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Left: Feature cards */}
+            <div className="flex flex-col gap-5">
+              {[
+                {
+                  title: 'Curated Catalog',
+                  desc: 'Products are grouped by daily-use or category-set focus.',
+                },
+                {
+                  title: 'Simple Checkout',
+                  desc: 'Fewer page steps and a clean, fast-action button layout to find.',
+                },
+                {
+                  title: 'Pickup Ready',
+                  desc: 'Order information stays direct. No complex date-range pickup update systems.',
+                },
+              ].map((card, idx) => (
+                <div
+                  key={idx}
+                  className="glass p-6 rounded-2xl group transition-all duration-300 hover:border-primary-500/40 hover:bg-bg-surface-lighter cursor-default"
+                >
+                  <h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary-400 transition-colors duration-300">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Right: Featured items grid */}
+            <div className="glass rounded-2xl border-white/5 p-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-5">
+                Featured Item
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {featured.map((product, idx) => (
+                  <a
+                    key={idx}
+                    href={`/products/${product.name}`}
+                    className="group relative aspect-square rounded-xl overflow-hidden bg-bg-surface-lighter border border-white/5 hover:border-primary-500/40 transition-all duration-300"
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                      <p className="text-xs font-bold text-white truncate">{product.title}</p>
+                      <p className="text-[10px] text-primary-400 font-semibold">{product.price}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+
+              {/* View products link */}
+              <div className="mt-5 flex justify-start">
+                <Button to="/products" variant="secondary" className="px-5 py-2 text-[10px] group/link">
+                  View Products <ArrowRight className="ml-1.5 h-3 w-3 group-hover/link:translate-x-0.5 transition-transform" />
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -124,6 +179,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-
-
-
